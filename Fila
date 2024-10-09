@@ -2,18 +2,16 @@ import java.util.LinkedList;
 import java.util.Scanner;
 public class Fila {
     private String nombre;
-    private LinkedList<String> fila;
+    private LinkedList<String> fila = new LinkedList<>(); // Lista enlazada para almacenar los nombres en la fila
     Scanner scanner = new Scanner(System.in);
 
-    public Fila() {
-        fila = new LinkedList<>();
-    }
     public void agregarPersona(){
         System.out.print("Ingrese el nombre de la persona: ");
         nombre=scanner.nextLine();
         fila.add(nombre);
         System.out.println(nombre + " ha sido añadido(a) al final de la fila.");
     }
+
     public void atenderPersona() {
         if (!fila.isEmpty()) {
             System.out.println(fila.removeFirst() + " ha sido atendido(a).");
@@ -21,6 +19,7 @@ public class Fila {
             System.out.println("No hay personas en la fila.");
         }
     }
+
     public void verFilaActual() {
         if (!fila.isEmpty()) {
             System.out.println("Personas en la fila: " + fila);
@@ -28,6 +27,7 @@ public class Fila {
             System.out.println("La fila está vacía.");
         }
     }
+
     public void verProximo() {
         if (!fila.isEmpty()) {
             System.out.println("La siguiente persona en ser atendida es: " + fila.getFirst());
@@ -35,4 +35,5 @@ public class Fila {
             System.out.println("No hay personas en la fila.");
         }
     }
+
 }
