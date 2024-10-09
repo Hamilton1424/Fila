@@ -1,14 +1,12 @@
 import java.util.Scanner;
 public class Menu {
 
-    Fila fila=new Fila();
+    Fila fila=new Fila(); // Crea una instancia de la clase Fila para manejar la fila de personas
     Scanner scanner=new Scanner(System.in);
 
     public void mostrarMenu() {
         int opcion;
-        
         do {
-            // Mostrar menú de opciones
             System.out.println("\t Menu");
             System.out.println("1. Añadir persona a la fila");
             System.out.println("2. Atender a la primera persona");
